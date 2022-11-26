@@ -1,4 +1,3 @@
-// buttons and counter text
 const counter = document.querySelector("#counter");
 const btns = document.querySelectorAll(".btn");
 const error = document.querySelector(".error");
@@ -12,23 +11,26 @@ btns.forEach((btn) => {
 
     if (styles.contains("increase")) {
       count++;
-     
+      counter.style.fontWeight = 'normal';
+      error.style.display = "none";
 
- 
+
+
+
     } else if (styles.contains("decrease")) {
       count--;
-     
 
-      if (count < 0){
-        count=0;
+
+      if (count < 0) {
+        count = 0;
         error.style.display = "block";
         counter.style.fontWeight = 'bold';
       }
-      
+
 
 
     } else if (styles.contains("reset")) {
-          count = 0;
+      count = 0;
     }
 
     counter.textContent = count;
