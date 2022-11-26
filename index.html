@@ -16,13 +16,18 @@
       color: white;
     }
 
-    p {
+    .cText {
       color: white;
+      padding-bottom: 10px;
+            border-bottom-style: solid;
+            border-bottom-width: 1.5px;
+            width: fit-content;
     }
 
     span {
       color: white;
     }
+    
 
     .decrease {
       background-color: white;
@@ -57,13 +62,15 @@
     .container{
       padding: 30px;
     }
+    
   </style>
 </head>
 
 <body>
   <div class="container">
     <h1>Counter using HTML</h1>
-    <p>Your Current Count is :  <span id="counter">0</span> </p>
+    <span class="textSpan">
+    <p class="cText"> Your Current Count is :  <span id="counter">0</span> </p></span>
     <div class="error">
       <p class="errorText">Error: Cannot go below 0</p>
     </div>
